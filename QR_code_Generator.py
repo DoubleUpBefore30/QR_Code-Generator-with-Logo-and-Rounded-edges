@@ -22,7 +22,7 @@ base_width = 100
 # adjust image size
 width_percent = (base_width / float(logo.size[0]))
 hSize = int((float(logo.size[1]) * float(width_percent)))
-logo = logo.resize((base_width, hSize), Image.ANTIALIAS)
+logo = logo.resize((base_width, hSize), Image.LANCZOS) # ANTIALIAS before Pillow 10.0.0 or LANCZOS after
 
 # instantiate QRCode object
 QR = qrcode.QRCode(version=5,
